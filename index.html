@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootCamp How To</title>
+    <link rel="stylesheet" href="indexstyle.css" class="">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Kelly's How To Page ... not the only way, but it's the way I did it!</h1>
+        <p> My intention is to make this page as we go as my "notes". I will put down how to, step by step, with images
+            as needed. As we go along, this page will evolve with the new tools that we learn. Because a friend needs
+            this first part now, I will go as basic as I can and leave out the css until later. </p>
+        <br>
+        <ul>Current Stuff
+            <li>github repository</li>
+
+        </ul>
+
+
+    </section>
+    <section class="repository">
+        <h2>Creating and pushing to github repository</h2>
+        <br>
+        <p>Ok here we go! Let's make a repository! Please navigate to your <a href="https://github.com/">github.</a> Log
+            in and you should see your main page.
+            <br>
+            <img src="assets/Step1.png">
+            <br>
+            Click the green New button in the left aside bar. Enter your repository name. Make it something useful that
+            pertains to your content. Don't name a website about potatos something like spam. Put in a description, make
+            sure it is public and check "Add a README file." Finally, click the green "Create repository."
+            <br>
+            <img src="assets/Step2.png">
+            <br>
+            Great job, now... get that weird thing on your computer!!! Here is where you should be, click the green Code
+            button.
+            <br>
+            <img src="assets/Step3.png">
+            <br>
+            Make sure you see the SSH underlined, and then copy that code you see "git@githb.com:......"
+            <img src="assets/Step4.png">
+            <br>
+            OHHH boy, here we go with the "tough part". But don't worry we can do this! Open GitBash to get to your
+            terminal. Very first thing... where are you? See that file path in yellow? It says I am in users/kelly.
+            Where do we want to be? That is up to you. Where do you want to save this repository? For me, I am saving my
+            work on my desktop in a folder called How To. So, that is where I want this repository.
+            <br>
+            <img src="assets/Step5.png">
+            <br>
+            So, I am going to type some commands here. cd means change directory, then I follow that with where I want
+            to go. You can do one folder at a time, or you can do the whole path if you need it. In your spare time,
+            tinker with this, moving up and down through folders. Get comfortable with git, we will use it a lot. I
+            forgot and put a space in my folder name and have not learned that part so... I got to as far as I remember
+            for my folder path. Push enter. Now, the line says I am on my desktop... great start! <br>
+            <img src="assets/Step6.png">
+            <br>
+            So now I need to find out what folders are in there. We are going to type ls. That means list files. A list
+            of everything in that directory `(or folder)` comes up. Now I can simply type cd H tab ...and it should
+            autofill the rest of that file for me. Great, now push enter and I am in that How To folder!
+            <br>
+            <img src="assets/STep7.png" alt="">
+            <br>
+            Ok here goes the magic... you copied that code from the github page. Let's use it! We start off if the git
+            ... that tells our terminal we are going to be using git. Clone means, I want a copy. And then, in "" the
+            url to what you want (thats the code you copied). Terminal sucks... it doesn't let you just paste with cntrl
+            v... try ctrl, shift, v.
+            <br><br><br>
+            Did it work? If not, quick side note. Go to the top of your terminal in the white bar, right click,
+            properties, and make sure Use Ctrl+Shift+C/V as Copy/Paste is checked.
+            <br>
+            <img src="assets/Step8.png">
+            <br>
+            Alright... this is what we should have. If you do... click enter!
+            <br>
+            <img src="assets/Step9.png">
+            Ok, it's going! See that stuff... kinda... random looking? That means it worked!!!
+            <br>
+            <img src="assets/step10.png">
+            Now ... you can move files around in here but I am not that good yet so I am going to do it the old school
+            "easy" way. Go to your file explorer (that's the manila folder that you use to find files before you knew
+            what a terminal is.) Go to the folder that we were in on the terminal. For me, that was the How To folder.
+            Now whenI am there... I see my gitHub repository folder as well... How-To-BootCamp. I want to take any files
+            that I am working on or want to upload to that repository and move them inside that new folder. Before:
+            <br>
+            <img src="assets/step11.png">
+            <br>
+            Click the file or folder you want, drag it into that new folder. Or cut and paste... whichever you prefer.
+            None of those can be open or they won't move. After and when I look in that new folder:
+            <br><br>
+            <img src="assets/Step12.png">
+            <br>
+            Great, back to the terminal. And here we go!!! Two things to do here. First, we need to get inside that new
+            git folder so if you aren't sure, type ls again. We use cd and the folder. You will know you are in a
+            repository file because now the address bar reads (main) at the end... that's our "branch"
+        <div class=""><br>
+            <img src="assets/Step13.png">
+            <br>
+            <br>
+            Now to get those files in there.<br>
+
+            1) you can add one file at a time by git add filename.file type... for example if I only want my index file
+            in there, it would read git add index.html. BUT 2) if you want everything in your folder then it is easier
+            to do git add . you need the period, it means everything. <br>
+            
+
+            </p>
+    </section>
+
+</body>
+
+</html>
