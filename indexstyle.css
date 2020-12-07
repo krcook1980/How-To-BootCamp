@@ -1,6 +1,7 @@
 /* indext elements */
 body {
     font-family: 'Padauk', sans-serif;
+    color: red;
 }
 
 section {
@@ -11,10 +12,12 @@ h1 {
     text-align: center;
 }
 
+
 p {
-    color: red;
-    font-size: large;
     
+    font-size: large;
+    padding: 5px;
+    margin: 5px;
 }
 img {
     width: 80%;
@@ -33,4 +36,9 @@ ul {
 .span2 {
     font-weight: bold;
     font-size:28px;
+}
+
+.span3 {
+    font-weight: bold;
+    color: black;
 }

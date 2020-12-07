@@ -7,18 +7,19 @@
     <title>BootCamp How To</title>
     <link rel="stylesheet" href="indexstyle.css" class="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <section class="container">
         <h1>Kelly's How To Page ... not the only way, but it's the way I did it!</h1>
         <p> My intention is to make this page as we go as my "notes". I will put down how to, step by step, with images
-            as needed. As we go along, this page will evolve with the new tools that we learn. Sorry in advance for my personality spilling into my directions!  </p>
+            as needed. As we go along, this page will evolve with the new tools that we learn. Sorry in advance for my
+            personality spilling into my directions! </p>
         <br>
         <ul><strong>Current Stuff</strong>
             <li>Create github repository, clone, and push files back up.</li>
-
+            <li><a href="#random">Random Side Notes - referenced sections noted through out by <span class="span3">++</span></a></li>
 
         </ul>
 
@@ -50,6 +51,7 @@
             <img src="assets/Step4.png">
             <br>
             <br>
+            <!--GitBash-->
             OHHH boy, here we go with the "tough part". But don't worry we can do this! Open GitBash to get to your
             terminal. Very first thing... where are you? See that file path in yellow? It says I am in users/kelly.
             Where do we want to be? That is up to you. Where do you want to save this repository? For me, I am saving my
@@ -57,22 +59,28 @@
             <br>
             <img src="assets/Step5.png">
             <br>
-            So, I am going to type some commands here. cd means change directory, then I follow that with where I want
-            to go. You can do one folder at a time, or you can do the whole path if you need it. In your spare time,
+            So, I am going to type some commands here.<span class="span3">++</span> <br>
+            cd means change directory, then I follow that with where I want
+            to go.  You can do one folder at a time, or you can do the whole path if you need it. In your spare time,
             tinker with this, moving up and down through folders. Get comfortable with git, we will use it a lot. I
             forgot and put a space in my folder name and have not learned that part so... I got to as far as I remember
-            for my folder path. So my command is <strong> cd c:/users/kelly/desktop</strong> Push enter. Now, the line says I am on my desktop... great start! <br>
+            for my folder path. So my command is <strong> cd c:/users/kelly/desktop</strong> Push enter. Now, the line
+            says I am on my desktop... great start! <br>
             <img src="assets/Step6.png">
             <br>
-            So now I need to find out what folders are in there. We are going to type <strong>ls</strong>. That means list files. A list
-            of everything in that directory (or folder) comes up. Now I can simply type <strong>cd H </strong> and press tab ...and it should
-            autofill the rest of that file for me. Great, now push enter and I am in that How To folder!
+            So now I need to find out what folders are in there. We are going to type <strong>ls</strong>. That means
+            list files. A list
+            of everything in that directory (or folder) comes up. Now I can simply type <strong>cd H </strong> and press
+            tab ...and it should
+            autofill the rest of that file for me.<span class="span3">++</span> Great, now push enter and I am in that How To folder!
             <br>
             <img src="assets/STep7.png" alt="">
             <br>
             Ok here goes the magic... you copied that code from the github page. Let's use it! We start off if the git
             ... that tells our terminal we are going to be using git. Clone means, I want a copy. And then, in "" the
-            url to what you want (thats the code you copied). <br>Your command is <strong> git clone "git@github.com:<span class="span1">whatever you copied goes here</span>"</strong>   Terminal sucks... it doesn't let you just paste with ctrl v... try ctrl, shift, v.
+            url to what you want (thats the code you copied). <br>Your command is <strong> git clone
+                "git@github.com:<span class="span1">whatever you copied goes here</span>"</strong> Terminal sucks... it
+            doesn't let you just paste with ctrl v... try ctrl, shift, v.
             <br><br><br>
             Did it work? If not, quick side note. Go to the top of your terminal in the white bar, right click,
             properties, and make sure Use Ctrl+Shift+C/V as Copy/Paste is checked.
@@ -81,15 +89,16 @@
             <br>
             Alright... this is what we should have. If you do... click enter!
             <br>
-            <img src="assets/Step9.png">
+            <img src="assets/Step9.png"><br>
             Ok, it's going! See that stuff... kinda... random looking? That means it worked!!!
             <br>
             <img src="assets/step10.png"><br>
-                <!-- get the files in the repository folder-->
+            <!-- get the files in the repository folder-->
             Now ... you can move files around in here but I am not that good yet so I am going to do it the old school
             "easy" way. Go to your file explorer (that's the manila folder that you use to find files before you knew
             what a terminal is.) Go to the folder that we were in on the terminal. For me, that was the How To folder.
-            Now whenI am there... I see my gitHub repository folder as well... How-To-BootCamp. I want to take any files
+            Now when I am there... I see my gitHub repository folder as well... How-To-BootCamp. I want to take any
+            files
             that I am working on or want to upload to that repository and move them inside that new folder. Before:
             <br>
             <img src="assets/step11.png">
@@ -101,30 +110,35 @@
             <br>
             <!-- Add, comment and push to github-->
             Great, back to the terminal. And here we go!!! Two things to do here. First, we need to get inside that new
-            git folder so if you aren't sure, type ls again. We use <strong>cd and the folder </strong>. You will know you are in a
-            repository file because now the address bar reads <span class="span1"> (main)</span> at the end... that's our "branch"
+            git folder so if you aren't sure, type ls again. We use <strong>cd and the folder </strong>. You will know
+            you are in a
+            repository file because now the address bar reads <span class="span1"> (main)</span> at the end... that's
+            our "branch"
             <br>
             <img src="assets/Step13.png">
             <br>
             <br>
             Now to get those files in there.<br>
 
-            1) you can add one file at a time by git add filename.file type... for example if I only want my index file
+            1) you can add one file at a time by git add filename.filetype... for example if I only want my index file
             in there, it would read git add index.html. BUT 2) if you want everything in your folder then it is easier
-            to do git add . you need the period, it means everything. Now press enter. <br>
+            to do <strong>git add .</strong> &nbsp You need the period, it means add everything. Now press enter. <br>
             <img src="assets/Step14.png">
             <br>
-            Good job if you see this weird crap. Now... we are going to make the note that shows up to other people
+            Good job if you see this weird crap. Someday we will know what it means! Now... we are going to make the
+            note that shows up to other people
             about what changes we made to the file. This is important, try not to skip it. So we are going to do git
             commit (when we push things its called commiting) and then -m to say message and our message in "". Again,
             you want this to be useful information here. Don't write a dad joke in there. Explain what you did to the
-            file you are commiting or what it is. Like so: <br>
+            file you are commiting or what it is. <br> Your command is <strong>git commit -m "Very informative message
+                here"</strong> Like so: <br>
             <img src="assets/Step15.png">
             <br>
             and push enter... if it did it right, you will have all kinds of stuff there. <br>
             <img src="assets/Step16.png">
             <br>
-            Almost there, hang in with me. Last thing... in the terminal we are going to do <strong>git push origin main </strong>If for
+            Almost there, hang in with me. Last thing... in the terminal we are going to do <strong>git push origin main
+            </strong>If for
             some reason this doesn't work, we can trouble shoot, but in general it should. It will probably ask you for
             a password, that is your github password.<br>
             <img src="assets/Step 17.png">
@@ -136,15 +150,31 @@
             <br>
             Scroll down to the bottom just above the red boxed Danger Zone you will see GitHub Pages. Inside change the
             box from None to Main. Click Save. When that thing changes green... it is live to share with that url
-            listed. If it won't go green after a while, change it back to none, save, main, save, refresh til it turns
+            listed. <br>***If it won't go green after a while, change it back to none, save, main, save, refresh til it
+            turns
             green.
             <br>
             <img src="assets/Step19.png">
             <br>
 
-            <span class="span2"> ****Now, super important, go back to your code tab and click the little pencil on the README. Be
+            <span class="span2"> ****Now, super important, go back to your code tab and click the little pencil on the
+                README. Be
                 descriptive: What is this project, what did you do, why did you do it? Screen shots are great, reference
                 anyones code you used, etc. A bad read me will drop your grade... make it a good one. </span>
+        </p>
+        <br>
+        <br>
+        <h2 id="random">Random side notes:</h2>
+        <br>
+        <p>
+        1) If you misspell something in the terminal it usually gives you hints on what you should have typed or what you
+        need to do first if you are missing a step.
+        <br>
+        2) When I was navigating to my file and I said cd H ... I said H because my folder starts with H "How To BootCamp". But if your repository is named Potatos, you would do cd P and push tab. <br>
+        IF that is not the folder you wanted, DO NOT push enter, erase and try again, maybe type more of the name and then tab.
+        <br>
+
+
         </p>
     </section>
 
