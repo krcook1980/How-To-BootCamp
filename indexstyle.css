@@ -1,7 +1,36 @@
+/* indext elements */
+body {
+    font-family: 'Padauk', sans-serif;
+}
+
+section {
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
 p {
     color: red;
     font-size: large;
+    
 }
 img {
-    width: 1500px;
+    width: 80%;
+    margin: 5px;
+}
+ 
+ul {
+    font-size: larger;
+}
+/* classes */
+
+.span1{
+    color:rgb(40, 118, 145);
+}
+
+.span2 {
+    font-weight: bold;
+    font-size:28px;
 }

@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BootCamp How To</title>
     <link rel="stylesheet" href="indexstyle.css" class="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <section class="container">
         <h1>Kelly's How To Page ... not the only way, but it's the way I did it!</h1>
         <p> My intention is to make this page as we go as my "notes". I will put down how to, step by step, with images
-            as needed. As we go along, this page will evolve with the new tools that we learn. Because a friend needs
-            this first part now, I will go as basic as I can and leave out the css until later. </p>
+            as needed. As we go along, this page will evolve with the new tools that we learn. Sorry in advance for my personality spilling into my directions!  </p>
         <br>
-        <ul>Current Stuff
-            <li>github repository</li>
+        <ul><strong>Current Stuff</strong>
+            <li>Create github repository, clone, and push files back up.</li>
+
 
         </ul>
 
@@ -25,7 +27,9 @@
     <section class="repository">
         <h2>Creating and pushing to github repository</h2>
         <br>
-        <p>Ok here we go! Let's make a repository! Please navigate to your <a href="https://github.com/">github.</a> Log
+        <p>Ok here we go! Let's make a repository! <br>
+            <!-- Github login and create repository-->
+            Please navigate to your <a href="https://github.com/" target="blank">github.</a> Log
             in and you should see your main page.
             <br>
             <img src="assets/Step1.png">
@@ -36,6 +40,7 @@
             <br>
             <img src="assets/Step2.png">
             <br>
+            <!-- Terminal clone from github-->
             Great job, now... get that weird thing on your computer!!! Here is where you should be, click the green Code
             button.
             <br>
@@ -43,6 +48,7 @@
             <br>
             Make sure you see the SSH underlined, and then copy that code you see "git@githb.com:......"
             <img src="assets/Step4.png">
+            <br>
             <br>
             OHHH boy, here we go with the "tough part". But don't worry we can do this! Open GitBash to get to your
             terminal. Very first thing... where are you? See that file path in yellow? It says I am in users/kelly.
@@ -55,19 +61,18 @@
             to go. You can do one folder at a time, or you can do the whole path if you need it. In your spare time,
             tinker with this, moving up and down through folders. Get comfortable with git, we will use it a lot. I
             forgot and put a space in my folder name and have not learned that part so... I got to as far as I remember
-            for my folder path. Push enter. Now, the line says I am on my desktop... great start! <br>
+            for my folder path. So my command is <strong> cd c:/users/kelly/desktop</strong> Push enter. Now, the line says I am on my desktop... great start! <br>
             <img src="assets/Step6.png">
             <br>
-            So now I need to find out what folders are in there. We are going to type ls. That means list files. A list
-            of everything in that directory `(or folder)` comes up. Now I can simply type cd H tab ...and it should
+            So now I need to find out what folders are in there. We are going to type <strong>ls</strong>. That means list files. A list
+            of everything in that directory (or folder) comes up. Now I can simply type <strong>cd H </strong> and press tab ...and it should
             autofill the rest of that file for me. Great, now push enter and I am in that How To folder!
             <br>
             <img src="assets/STep7.png" alt="">
             <br>
             Ok here goes the magic... you copied that code from the github page. Let's use it! We start off if the git
             ... that tells our terminal we are going to be using git. Clone means, I want a copy. And then, in "" the
-            url to what you want (thats the code you copied). Terminal sucks... it doesn't let you just paste with cntrl
-            v... try ctrl, shift, v.
+            url to what you want (thats the code you copied). <br>Your command is <strong> git clone "git@github.com:<span class="span1">whatever you copied goes here</span>"</strong>   Terminal sucks... it doesn't let you just paste with ctrl v... try ctrl, shift, v.
             <br><br><br>
             Did it work? If not, quick side note. Go to the top of your terminal in the white bar, right click,
             properties, and make sure Use Ctrl+Shift+C/V as Copy/Paste is checked.
@@ -79,7 +84,8 @@
             <img src="assets/Step9.png">
             Ok, it's going! See that stuff... kinda... random looking? That means it worked!!!
             <br>
-            <img src="assets/step10.png">
+            <img src="assets/step10.png"><br>
+                <!-- get the files in the repository folder-->
             Now ... you can move files around in here but I am not that good yet so I am going to do it the old school
             "easy" way. Go to your file explorer (that's the manila folder that you use to find files before you knew
             what a terminal is.) Go to the folder that we were in on the terminal. For me, that was the How To folder.
@@ -93,10 +99,11 @@
             <br><br>
             <img src="assets/Step12.png">
             <br>
+            <!-- Add, comment and push to github-->
             Great, back to the terminal. And here we go!!! Two things to do here. First, we need to get inside that new
-            git folder so if you aren't sure, type ls again. We use cd and the folder. You will know you are in a
-            repository file because now the address bar reads (main) at the end... that's our "branch"
-        <div class=""><br>
+            git folder so if you aren't sure, type ls again. We use <strong>cd and the folder </strong>. You will know you are in a
+            repository file because now the address bar reads <span class="span1"> (main)</span> at the end... that's our "branch"
+            <br>
             <img src="assets/Step13.png">
             <br>
             <br>
@@ -107,24 +114,37 @@
             to do git add . you need the period, it means everything. Now press enter. <br>
             <img src="assets/Step14.png">
             <br>
-            Good job if you see this weird crap. Now... we are going to make the note that shows up to other people about what changes we made to the file. This is important, try not to skip it.  So we are going to do git commit (when we push things its called commiting) and then -m to say message and our message in "". Again, you want this to be useful information here. Don't write a dad joke in there. Explain what you did to the file you are commiting or what it is. Like so: <br>
+            Good job if you see this weird crap. Now... we are going to make the note that shows up to other people
+            about what changes we made to the file. This is important, try not to skip it. So we are going to do git
+            commit (when we push things its called commiting) and then -m to say message and our message in "". Again,
+            you want this to be useful information here. Don't write a dad joke in there. Explain what you did to the
+            file you are commiting or what it is. Like so: <br>
             <img src="assets/Step15.png">
             <br>
             and push enter... if it did it right, you will have all kinds of stuff there. <br>
             <img src="assets/Step16.png">
             <br>
-            Almost there, hang in with me.  Last thing...  in the terminal we are going to do git push origin main    If for some reason this doesn't work, we can trouble shoot, but in general it should. It will probably ask you for a password, that is your github password.<br>
-            <img src="assets/Step17.png">
+            Almost there, hang in with me. Last thing... in the terminal we are going to do <strong>git push origin main </strong>If for
+            some reason this doesn't work, we can trouble shoot, but in general it should. It will probably ask you for
+            a password, that is your github password.<br>
+            <img src="assets/Step 17.png">
             <br>
-            There ya have it... now... final step so others can see your stuff! If you don't see your files, try refreshing the page if you never closed it from above. Now click on settings.<br>
+
+            There ya have it... now... final step so others can see your stuff! If you don't see your files, try
+            refreshing the page if you never closed it from above. Now click on settings.<br>
             <img src="assets/Step18.png">
             <br>
-            Scroll down to the bottom just above the red boxed Danger Zone you will see GitHub Pages.  Inside change the box from None to Main. Click Save. When that thing changes green... it is live to share with that url listed. If it won't go green after a while, change it back to none, save, main, save, refresh til it turns green.
+            Scroll down to the bottom just above the red boxed Danger Zone you will see GitHub Pages. Inside change the
+            box from None to Main. Click Save. When that thing changes green... it is live to share with that url
+            listed. If it won't go green after a while, change it back to none, save, main, save, refresh til it turns
+            green.
             <br>
             <img src="assets/Step19.png">
             <br>
 
-       <strong> Now, super important, go back to your code tab and click the little pencil on the README.  Be descriptive, What is this project, what did you do, why did you do it? Screen shots are great, reference anyones code you used, etc. A bad read me will drop your grade... make it a good one. </strong>
+            <span class="span2"> ****Now, super important, go back to your code tab and click the little pencil on the README. Be
+                descriptive: What is this project, what did you do, why did you do it? Screen shots are great, reference
+                anyones code you used, etc. A bad read me will drop your grade... make it a good one. </span>
         </p>
     </section>
 
