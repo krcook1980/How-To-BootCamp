@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>jQuery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-3">javaScript and jQuery</h1>
+        <p class="lead">Let's make a dynamic page!!</p>
+
+    </div>
+
+    <div class="container">
+        <h1>First things first, we need some html to get us going.</h1>
+        <p>This is a simple layout, I have used Bootstrap to get us set up. Your html does need the links to the css and
+            jquery files for this. We can use javascript and jquery to dynamically add elements, style, and functionality to our page. </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h2>We are going to make a list</h2>
+            <p>It is easier if we start with some kind of structure to begin with. It is possible to set up an entire
+                page ith no html, but we are beginners so let's not be silly now!</p>
+            <p>Step one, we are going to set up an element with an id or class that we can reference.</p>
+            <img src="assets/jq1.JPG">
+        </div>
+        <div class="row">
+            <h2>Get in your script file... or make one first!</h2>
+            <p>First, look down below and be sure your script is actually linked. I can't tell you how many times this
+                has wasted hours of my life trouble shooting something that just wont' work.... only to find out the
+                file isn't being seen by the html.</p>
+            <p>Step one, let's define some variables!
+            <ul>
+                <li>I typically start with the bucket (the element that you are going to be adding the code to). In this
+                    case, it is the id "list here"</li>
+                <li>In the script file, type var list = $("#listHere");</li>
+                <li>Why? with jQuery we use the $("") as our "go look for what is in here" # because we are looking for
+                    an id, . if class and none if element. And then the name we chose for that "bucket". And finish with
+                    the ; always in javascript/jQuery. </li>
+                <li>Second variable ... what is going in here at the highest level? Well, I am making a list which means
+                    the list item is the next html needed. So... lets var listItem = $("li /li") but with the alligator
+                    brackets in there. (see photo)</li>
+                <li>When do you use those brackets? If the element is in your code and you want to look for it, no
+                    brackets. If the element is not in your code and you want to make it... brackets.</li>
+                <img src="assets/jq2.JPG">
+
+            </ul>
+            </p>
+            <p>Step two, lets use those things!
+            <ul>
+                <li>This is where we think about order. First the inside of everything, the smallest nugget. For us, it
+                    is the listItem.</li>
+                <li>What do we want to do with it? Give it some formatting? Maybe a class? Let's give it a try.</li>
+                <li>Using the variable name we create we are going to type listItem.text("I am an item"); this code says
+                    "the text for this variable should say the words inside the quotation marks"</li>
+                <li>I happen do have a class set up in my css called span1 that adds a background color. We can add that
+                    with listItem.addClass("span1"); so inside the li tag, we have added a class of span1</li>
+                <li>Right now... that item is nowhere, we have to put it in our bucket for it to show up. We do this
+                    with list.append(listItem); listItem is NOT in "" because it is a variable. If you put it inside ""
+                    it will append the words in that string, not the li we created.</li>
+                <li>Couple of notes here... first, everything you want to do to the list item in general needs to be
+                    done prior to shoving it in the bucket. Second... had we not made a variable for the bucket you can
+                    write the same code by using $("#listHere").append(listItem); and it will do the same thing. When do
+                    we make a variable? If you are only doing something once to that bucket... maybe you don't need a
+                    variable. But I find it is best to assume you need it again.</li>
+                <img src="assets/jq3.JPG">
+
+            </ul>
+            </p>
+            <p>Great, there is our code, and now even though you see nothing here:</p>
+            <img src="assets/jq4.JPG">
+            <div>
+                <p>We can see it on the page here:</p>
+                
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+                <h2>Dynamic list of who knows what!</h2>
+                <div class="row">
+                    <ul id="listHere">
+
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+
+
+        <div class="container">
+            <p>Now... I kinda made a poor choice there making a list of one item. But if we use an array, and a for loop we can generate multiple list items without making lots of variables or something weird. We can do all kinds of stuff with the jQuery. Let's highlight a couple:</p>
+            <p>.removeClass and .addClass - First of all... did you notice that nothing happened with the class of span1 that I said would have a background? Why? Let's check out the dev tools...</p>
+            <p><img src="assets/jq6.JPG"></p>
+            <p>Yeah... huh, look it is there... but nothing happened... well it is because I didn't link the style sheet in the head of this page. To be honest it is from my first days of coding and quite ugly. But this does prove that the class was included. Why does this help? Well, what if we change it from a class I made, to a bootStrap class. For example if we gave it the class font-italic instead of span1. Let's replace it... now that list item is italic so woo it does work! So addClass easy enough to understand, you can add whatever you like in there. When do we need to take one out? Most common for me: is-hidden.  To toggle things as viewable at certain times you would start with class="is-hidden" and then use your jQuery to .removeClass("is-hidden"); and .addClass("is-visible").
+                
+            </p>
+        </div>
+        <div class="container">
+            <p>How about .attr() This one is a bit different. It is saying two things at once:
+                <br>1- $("#listHere").attr("data-id", "hippo"); is going to add the data-id="hippo" to your bucket listHere
+                <br>2- $("#listHere").attr("data-id"); is going to return the value of the id which is hippo... useful when you are linking multiple buttons into a click event and need specific info about which button was clicked... stuff like that.
+                
+            </p>
+        </div>
+        <div class="container">
+            <p> .text("") is easy enough, it is going to insert whatever text string is inside</p>
+            <p> .append("") adds whatever is in there (string, variable, image, etc) to the end of that bucket, it doesn't overwrite current info  Ont he flip side .prepend shoves it in front of everything</p>
+            <p>.empty(); will empty that bucket, generally used prior to the rest of what you want happening there. If you put it at the end of your function, your function will do everything and then empty showing nothing.</p>
+             <p>.val(); is another multipurpose  If you put something in there, it will set a value, if you leave it empty it will return the value.</p>  
+            </p>
+        </div>
+        <div class="container">
+            <p>One last note here.  In our variable listItem above, we made the li, then added the class.  There is another way if you are working with a hard one... even though the class isn't, let's type it out anyway.</p>
+            <img src="assets/jq7.JPG">
+            <p>You can see in the list above that the item is there. It has added everything inside the "".  One thing to note is around the class we had to switch to ' instead of ".  Using the " will end the string and that isn't what we wanted there...although sometimes we do to be able to combine strings with variables.</p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="jqscript.js"></script>
+</body>
+
+</html>

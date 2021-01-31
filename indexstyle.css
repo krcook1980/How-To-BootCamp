@@ -24,8 +24,13 @@ img {
     margin: 5px;
 }
  
-ul {
+dl {
     font-size: larger;
+    padding: 15px;
+}
+
+dt {
+    list-style-position: inside;
 }
 /* classes */
 
