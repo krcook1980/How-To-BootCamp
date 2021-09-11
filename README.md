@@ -4,3 +4,8 @@ To help myself and others make it through this class, I decided to make a step b
 
 ## First submit
 Make a list of how to create a repository in github, use terminal to clone to local machine, and then add and push files to the repository, and finally how to publish the pages so they are viewable by others. This page is UGLY!!! I mean really ugly. But that will be my next step and next commits.
+
+## Second submit
+Make a landing page, move first submit to it's own page, and add a page for javascript/jquery.
+
+
