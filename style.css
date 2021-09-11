@@ -1,0 +1,16 @@
+body {
+    margin:auto;
+    
+}
+
+img {
+    width: 50%;
+    margin-left: 25px;
+}
+
+section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(29, 29, 180);
+    margin-left: 5%;
+    margin-right: 5%;
+}
